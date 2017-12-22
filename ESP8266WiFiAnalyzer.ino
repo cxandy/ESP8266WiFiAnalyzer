@@ -16,7 +16,7 @@
 #define PNP_PWR_TRANSISTOR
 
 #if defined(PNP_PWR_TRANSISTOR)
-#define LCD_PWR_PIN 4 // D2
+#define LCD_PWR_PIN 16 // For AZSMZ TFT 1.6X
 #else
 #define LCD_PWR_PIN 4 // D2
 #define LED_PWR_PIN 2 // D4
@@ -33,8 +33,8 @@
 #include <Adafruit_ILI9341.h>
 #endif
 
-#define TFT_DC     5 // D1
-#define TFT_CS     15 // D8
+#define TFT_DC     0 // For AZSMZ TFT 1.6X
+#define TFT_CS     2 // For AZSMZ TFT 1.6X
 
 #if defined(ST7735_18GREENTAB) || defined(ST7735_18REDTAB) || defined(ST7735_18GBLACKTAB) || defined(ST7735_144GREENTAB)
 Adafruit_ST7735 tft = Adafruit_ST7735(TFT_CS,  TFT_DC, 0 /* RST */);
